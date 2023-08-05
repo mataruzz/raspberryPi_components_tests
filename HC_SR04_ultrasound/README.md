@@ -1,4 +1,8 @@
 # HC-SR04 ultrasound
+In this package you can find a basic python script to make work a Raspberry Pi 3B+ (having ubuntu server 22.04) with a standard HC-SR04 ultrasound components.\
+The aim is to understand the basic working principle of the ultrasound, and get more confident with the GPIO library.
+
+## Component description
 <p align="center">
   <img width = "250" src="https://github.com/mataruzz/arduino_components_tests/blob/main/HC_SR04_ultrasound/images/HC-SR04-Ultrasonic-Sensor.jpg">
 </p>
