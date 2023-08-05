@@ -1,7 +1,6 @@
 #!/usr/bin/python3
  
 import RPi.GPIO as GPIO 
-import math 
 from time import sleep 
 
 # Declaring how we want to declare our pin
