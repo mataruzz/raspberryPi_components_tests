@@ -23,7 +23,7 @@ def main():
   
   while True:
     # Operational mode selection
-    op = input("Operationa mode?(c:continuous/s:single): ")
+    op = input("Operationa mode?(c:continuous/s:single/e:end): ")
     
     rotations = [0, 45, 90, 135, 180]
     
