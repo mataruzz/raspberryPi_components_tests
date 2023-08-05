@@ -1,44 +1,53 @@
-# HC-SR04 ultrasound
-In this package you can find a basic python script to make work a Raspberry Pi 3B+ (having ubuntu server 22.04) with a standard HC-SR04 ultrasound components.\
-The aim is to understand the basic working principle of the ultrasound, and get more confident with the GPIO library.
+# HC-SR04 Ultrasound Module Usage Guide
+In this guide, you will find a comprehensive explanation and setup for utilizing a Raspberry Pi 3B+ (running Ubuntu Server 22.04) in conjunction with the HC-SR04 Ultrasound component.\
+This project aims to help you grasp the fundamental principles of ultrasound technology and enhance your familiarity with the GPIO (General-Purpose Input/Output) library.
 
-## Component description
+## Understanding the HC-SR04 Ultrasound Component
 <p align="center">
   <img width = "250" src="https://github.com/mataruzz/arduino_components_tests/blob/main/HC_SR04_ultrasound/images/HC-SR04-Ultrasonic-Sensor.jpg">
 </p>
-An ultrasonic transmitter, which is essentially composed by a speacker, a receiver and a control circuit, send continuous high frequency ultrasonic waves. The distance, then, is computed by acquiring the time spent to travel back and forth, and multiplying this time by the sound speend (in air: 343 [m/s]).
+An ultrasonic transmitter, which is essentially composed by a speacker, a receiver and a control circuit, send continuous high frequency ultrasonic waves. By measuring the time taken for these waves to travel back and forth, the distance can be calculated. It is mainly used for distance measurement and obstacle detection.\
+The distance is determined using the formula:
 
 ***Distance*** ***=*** ***time*** * ***speed***
 
-## Configuration
-**REMEMBER:** raspberry's pi 3B+ GPIOs support **3.3** **V** as maximum voltage. For this reason, a [voltage divider](https://en.wikipedia.org/wiki/Voltage_divider) is necessary.
+Here, the speed of sound in air is approximately 343 m/s.
 
-- To see basic Raspberry pi information, including pin's enumeration:
+## Configuration and Setup
+**Note:** Raspberry Pi 3B+ GPIO pins support a maximum voltage of 3.3 V. Therefore, the use of a [voltage divider](https://en.wikipedia.org/wiki/Voltage_divider) is necessary.
+
+To view essential information about Raspberry Pi pins, including pin enumeration, use the following command:
 ```
 pinout
 ```
-Following BOARD mode to describe GPIO connections: 
-- Vcc channel to 5V
-- Trig channel to GPIO18, which is a PWM
-- Echo channel to GPIO24 (partitioning its voltage around 3V)
-- Gnd channel to GND
+Below is the configuration for connecting the HC-SR04 Ultrasound module in BOARD mode:
+- Connect the Vcc channel to the 5V pin.
+- Connect the Trig channel to GPIO18, which supports PWM (Pulse Width Modulation).
+- Connect the Echo channel to GPIO24, ensuring its voltage is reduced to around 3V using a voltage divider.
+- Connect the Gnd channel to a GND pin.
 
-The voltage partition, to have a voltage of around *3.125* *V*, has been built using the following resistors:
-1. 550 Ω -> (330 + 220) Ω
+For the voltage division, two resistors are employed to achieve a voltage of approximately 3.125 V:
+1. 550 Ω (combination of 330 Ω and 220 Ω resistors)
 2. 330 Ω 
 
-The connection scheme is depicted below:
+Refer to the following wiring diagram for a clearer visualization:
 <p align="center">
   <img width = "700" src="https://github.com/mataruzz/arduino_components_tests/blob/main/HC_SR04_ultrasound/images/wiring_connection_HC_SR04.png">
 </p>
 
-## Running
-Clone the repository on the raspberry pi 3B+:
+## Running The Ultrasonic Test
+To get started, follow these steps:
+
+1. Clone the repository onto your Raspberry Pi 3B+ using the terminal:
 ```  
 git clone https://github.com/mataruzz/arduino_components_tests.git
 ```
-Run the script:
+2. Navigate to the cloned directory:
+```
+cd arduino_components_tests
+```
+3. Execute the ultrasound test script:
 ```
 ./HC_SR04_ultrasound/ultrasound_test.py
 ```
-
+By following these instructions, you'll successfully set up and run the HC-SR04 Ultrasound module with your Raspberry Pi 3B+. 
