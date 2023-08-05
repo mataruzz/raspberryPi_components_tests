@@ -4,7 +4,6 @@ import RPi.GPIO as GPIO
 from time import sleep 
 
 # Declaring how we want to declare our pin
-GPIO.cleanup() 
 GPIO.setmode(GPIO.BOARD)  #GPIO.BOARD consider the phisical number of pin
 #  GPIO.setmode(GPIO.BCM) #segue la numerazione del processore (si vede tramite pinout)
 
@@ -51,9 +50,11 @@ def main():
     elif op.upper() == "S":
       angle = float(input("\t-Insert the desired degree angle: "))
       rotate(pwm, angle)
+    elif op.upper() == "E":
+      pwm.stop()  
+      GPIO.cleanup() 
+      return 0
 
-  # pwm.stop()  
-  # GPIO.cleanup() 
   
 
 if __name__ == '__main__':
