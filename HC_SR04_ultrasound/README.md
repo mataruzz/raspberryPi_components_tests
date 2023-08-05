@@ -1,6 +1,7 @@
 # HC-SR04 ultrasound
-![Alt text](https://github.com/mataruzz/arduino_components_tests/blob/main/HC_SR04_ultrasound/images/HC-SR04-Ultrasonic-Sensor.jpg)
-
+<p align="center">
+  <img width = "250" src="https://github.com/mataruzz/arduino_components_tests/blob/main/HC_SR04_ultrasound/images/HC-SR04-Ultrasonic-Sensor.jpg">
+</p>
 An ultrasonic transmitter, which is essentially composed by a speacker, a receiver and a control circuit, send continuous high frequency ultrasonic waves. The distance, then, is computed by acquiring the time spent to travel back and forth, and multiplying this time by the sound speend (in air: 343 [m/s]).
 
 ***Distance*** ***=*** ***time*** * ***speed***
@@ -23,8 +24,9 @@ The voltage partition, to have a voltage of around *3.125* *V*, has been built u
 2. 330 Ω 
 
 The connection scheme is depicted below:
-
-![Alt text](https://github.com/mataruzz/arduino_components_tests/blob/main/HC_SR04_ultrasound/images/wiring_connection_HC_SR04.png)
+<p align="center">
+  <img width = "700" src="https://github.com/mataruzz/arduino_components_tests/blob/main/HC_SR04_ultrasound/images/wiring_connection_HC_SR04.png">
+</p>
 
 ## Running
 Clone the repository on the raspberry pi 3B+:
