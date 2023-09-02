@@ -30,14 +30,26 @@ To get started, follow these steps:
 
 1. Clone the repository onto your Raspberry Pi 3B+ using the terminal:
 ```  
-git clone https://github.com/mataruzz/arduino_components_tests.git
+git clone https://github.com/mataruzz/raspberryPi_components_tests.git
 ```
 2. Navigate to the cloned directory:
 ```
-cd arduino_components_tests
+cd raspberryPi_components_tests
 ```
 3. Execute the servo test script:
 ```
-./S90_servo_motor/servo_test.py
+./S90_servo_motor/servo_test_PWM.py
 ```
 By following these instructions, you'll successfully set up and run the Micro Servo SG90 module with your Raspberry Pi 3B+. 
+
+### ***Update***:
+Other tests have been developed (both in python and in Cpp) in order to manually recreate the PWM, setting 'HIGH' or 'LOW' the pin. To run these tests, the pin connected to the board must be a **NON** PWM_PIN.
+
+4. Compile the C++ script:
+```
+g++ -o S90_servo_motor/servo_test S90_servo_motor/servo_test.cpp -lwiringPi
+```
+5. Execute the executable servo test
+```
+./S90_servo_motor/servo_test
+```

@@ -5,10 +5,11 @@ from time import sleep
 
 # Declaring how we want to declare our pin
 GPIO.setmode(GPIO.BOARD)  #GPIO.BOARD consider the phisical number of pin
-#  GPIO.setmode(GPIO.BCM) #segue la numerazione del processore (si vede tramite pinout)
+# GPIO.setmode(GPIO.BCM) #segue la numerazione del processore (si vede tramite pinout)
+servoPin = 12 #29 #5 #12
 
 # Declaration the pin's port and type
-GPIO.setup(12,GPIO.OUT)  
+GPIO.setup(servoPin,GPIO.OUT) 
 
 def rotate(pwm, deg):
   # formula to convert angle to duty cycle: (deg/18)+2
@@ -16,7 +17,7 @@ def rotate(pwm, deg):
 
 def main():
   # Declaring the actual used PWM pin and it's frequency. S90 use 50Hz (20ms as period)
-  pwm=GPIO.PWM(12,50)
+  pwm=GPIO.PWM(servoPin,50)
   # Starting the servo at 0 degree
   pwm.start(2)  
   sleep(0.5)
@@ -59,3 +60,4 @@ def main():
 
 if __name__ == '__main__':
   main()
+
