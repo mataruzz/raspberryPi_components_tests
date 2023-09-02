@@ -40,11 +40,11 @@ To get started, follow these steps:
 
 1. Clone the repository onto your Raspberry Pi 3B+ using the terminal:
 ```  
-git clone https://github.com/mataruzz/arduino_components_tests.git
+git clone https://github.com/mataruzz/raspberryPi_components_tests.git
 ```
 2. Navigate to the cloned directory:
 ```
-cd arduino_components_tests
+cd raspberryPi_components_tests
 ```
 3. Execute the ultrasound test script:
 ```

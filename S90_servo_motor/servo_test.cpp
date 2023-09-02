@@ -1,4 +1,4 @@
-#include </home/mataruzz/projects/raspberryPi_components_tests/S90_servo_motor/WiringPi/wiringPi/wiringPi.h>
+#include "wiringPi.h"
 #include <unistd.h>
 #include <cstdio>
 #include <string>
