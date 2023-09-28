@@ -12,6 +12,8 @@ Inside this repository, you'll explore the following fundamental components:
 
 - **SG90 Servomotor**: Testing how to manipulate the position of a servomotor using PWM (Pulse Width Modulation) signals.
 
+- ## **TO DO: add DC_motor information**
+
 ## Getting Started
 
 Each component has a dedicated python script and an informative guide, designed to facilitate and explain the setup. 
