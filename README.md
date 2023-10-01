@@ -11,8 +11,8 @@ Inside this repository, you'll explore the following fundamental components:
 - **HC-SR04 Ultrasound**: Testing how to effectively measure distances and detect obstacles using high-frequency sound waves.
 
 - **SG90 Servomotor**: Testing how to manipulate the position of a servomotor using PWM (Pulse Width Modulation) signals.
-
-- ## **TO DO: add DC_motor information**
+ 
+- **TT DC Gear Motor**: Testing how to control the speed and direction of a dc motor using PWM (Pulse Width Modulation) signals with an appropriate motor driver.
 
 ## Getting Started
 
